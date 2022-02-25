@@ -46,10 +46,12 @@ public class _Function {
         return number += 1;
     };
 
+    static Integer some = 1;
     // java anonymous class
     static Function<Integer, Integer> incrementByOneAnonymousClass = new Function<Integer, Integer>() {
         @Override
         public Integer apply(Integer integer) {
+            some+=1;
             return integer+=1;
         };
     };
