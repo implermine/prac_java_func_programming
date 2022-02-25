@@ -23,6 +23,17 @@ public class _Consumer {
                 + (showPhoneNumber ? customer.customerPhoneNumber : "*****"));
     };
 
+
+    // ==========================================================
+
+    // java normal function
+    static void greetCustomer(Customer customer) {
+        System.out.println("Hello " + customer.customerName +
+                ", thanks for registering phone number " +
+                customer.customerPhoneNumber);
+    }
+
+    // java consumer function interface
     static Consumer<Customer> greetCustomerConsumer = customer ->
     {
         System.out.println("Hello " + customer.customerName +
@@ -30,12 +41,7 @@ public class _Consumer {
                 customer.customerPhoneNumber);
     };
 
-    static void greetCustomer(Customer customer) {
-        System.out.println("Hello " + customer.customerName +
-                ", thanks for registering phone number " +
-                customer.customerPhoneNumber);
-    }
-
+    // ==========================================================
     static void greetCustomerV2(Customer customer, Boolean showPhoneNumber) {
         System.out.println("Hello " + customer.customerName +
                 ", thanks for registering phone number "

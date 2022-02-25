@@ -28,19 +28,31 @@ public class _Function {
         System.out.println("normalFunctionResult = " + normalFunctionResult);
     }
 
-    static Function<Integer, Integer> incrementByOneFunction = number -> {
-        return number += 1;
-    };
+
+
 
     static Function<Integer, Integer> multiplyBy10Function = number -> number * 10;
 
 
 
-    // this is target function that is replaced by functional interface...?
+    // =================================================================
+    // java normal function
     static int incrementByOne(int number) {
         return number + 1;
     }
 
+    // java function interface
+    static Function<Integer, Integer> incrementByOneFunction = number -> {
+        return number += 1;
+    };
+
+    // java anonymous class
+    static Function<Integer, Integer> incrementByOneAnonymousClass = new Function<Integer, Integer>() {
+        @Override
+        public Integer apply(Integer integer) {
+            return integer+=1;
+        };
+    };
     //==================================================================
 
     //these two are exactly same

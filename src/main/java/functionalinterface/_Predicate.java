@@ -36,15 +36,18 @@ public class _Predicate {
     }
 
 
+    //====================================================================
     // normal java function
     static boolean isPhoneNumberValid(String phoneNumber) {
         return phoneNumber.startsWith("07") && phoneNumber.length() == 11;
     }
 
+    // Functional Interface
     static Predicate<String> isPhoneNumberValidPredicate = phoneNumber ->
     {
         return phoneNumber.startsWith("07") && phoneNumber.length() == 11;
     };
+    //=====================================================================
 
     static Predicate<String> containsNumber3 = phoneNumber ->
             phoneNumber.contains("3");
