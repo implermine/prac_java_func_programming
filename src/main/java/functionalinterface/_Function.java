@@ -26,6 +26,9 @@ public class _Function {
         System.out.println("biFunctionResult = " + biFunctionResult);
         int normalFunctionResult = incrementByOneAndMultiply(4, 100);
         System.out.println("normalFunctionResult = " + normalFunctionResult);
+
+        System.out.println("====================");
+//        System.out.println(incrementByOneAnonymousClass.some());
     }
 
 
@@ -54,7 +57,12 @@ public class _Function {
             some+=1;
             return integer+=1;
         };
+
+        public int some(){
+            return 2;
+        }
     };
+
     //==================================================================
 
     //these two are exactly same
